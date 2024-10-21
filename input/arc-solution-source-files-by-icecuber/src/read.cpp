@@ -141,7 +141,6 @@ Image Sample::readImage() {
   return ret;
 }
 
-
 vector<Sample> readAll(string path, int maxn) { //maxn = -1
   // const string base_path[2] = {"/kaggle/working/abstraction-and-reasoning-challenge/", "./dataset/"}; XX
   const string base_path[2] = {"../working/abstraction-and-reasoning-challenge/", "./dataset/"};
