@@ -3,8 +3,8 @@ from pygame.locals import *
 import json
 import os
 
-def read_task(task_type, ind):
-    with open(f'dataset/{task_type}/{ind}.json') as f:
+def read_task(task_type, filename):
+    with open(f'dataset/{task_type}/{filename}') as f:
         data = json.load(f)
     return data
 
