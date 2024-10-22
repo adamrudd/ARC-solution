@@ -1,4 +1,3 @@
-# edited to add control flags and see comment below to potentially add time controls
 #!/usr/bin/env python
 
 from subprocess import *
@@ -92,12 +91,24 @@ def runAll(cmd_list, threads):
     running = []
     cmdi = 0
 
+    # Replace XX
     def callback(process, status, timeused, memused):
-        assert(status != RTE)
         print(exit_names[status], process.cmd, " %.1fs"%timeused, "%.0fMB"%memused)
         sys.stdout.flush()
 
+        if status == RTE:
+            print(f"Runtime Error occurred for {process.cmd}")
+            with open(f'store/tmp/{process.cmd.replace(" ", "_")}.err', 'r') as f:
+                print(f.read())
+
         ret_stats[process.cmd] = (status, timeused, memused)
+    
+    # def callback(process, status, timeused, memused):
+    #     assert(status != RTE)
+    #     print(exit_names[status], process.cmd, " %.1fs"%timeused, "%.0fMB"%memused)
+    #     sys.stdout.flush()
+
+    #     ret_stats[process.cmd] = (status, timeused, memused)
 
     while len(running) or cmdi < len(cmd_list):
         while cmdi < len(cmd_list) and len(running) < THREAD_LIMIT:
@@ -147,17 +158,11 @@ if len(sys.argv) == 3:
     ntasks = n
     task_list = range(l, l+n)
 else:
-    # Add these three lines XX
-    print("Current working directory:", os.getcwd())
-    print("Contents of current directory:", os.listdir())
-    print(f"Number of tasks to process: {ntasks}")
-    
     ntasks = int(check_output('./count_tasks'))
     task_list = range(0, ntasks)
     #print("Usage: python %s <start_task> <#tasks>"%sys.argv[0])
 
-#TODO: change back to depth 3/4 (guess this was icecube intention - not me)
-
+#TODO: change back to depth 3/4
 if RUN_DEPTH_3: # Add XX this line and indent contents
     depth3 = []
     for i in range(ntasks):
@@ -222,54 +227,3 @@ outf = open('submission_part.csv', 'w')
 for line in combined:
     print(line, file=outf)
 outf.close()
-
-
-# proposal XX for using timeout instead of true/false flag:
-# Based on your request for the least complicated adjustment that's easily reversible, I suggest adding a simple timeout mechanism to the runAll function. This approach will preserve the overall structure and functionality of the script while limiting the execution time for each task. Here's how you can modify the runAll function to include a timeout:
-
-#     Add a new parameter to the runAll function for the timeout duration:
-
-# python
-# def runAll(cmd_list, threads, timeout=10):  # Default timeout of 10 seconds
-
-#     Modify the main loop in runAll to check for a timeout:
-
-# python
-# def runAll(cmd_list, threads, timeout=10):
-#     # ... (existing code)
-
-#     start_time = time.time()
-#     while len(running) or cmdi < len(cmd_list):
-#         current_time = time.time()
-#         if current_time - start_time > timeout:
-#             print(f"Timeout reached after {timeout} seconds. Stopping execution.")
-#             break
-
-#         # ... (rest of the existing code in the while loop)
-
-#     # Kill any remaining processes
-#     for r in running:
-#         r.process.kill()
-#         callback(r, TLE, r.timeused, r.memused)
-
-#     return ret_stats
-
-#     When calling runAll, specify the timeout:
-
-# python
-# stats3 = runAll(depth3, 4, timeout=10)
-# stats3_flip = runAll(flip3, 4, timeout=10)
-# # ... (for other runAll calls)
-
-# This modification will:
-
-#     Stop the execution of runAll after the specified timeout.
-#     Preserve all the existing functionality.
-#     Be easily reversible by simply removing the timeout parameter or setting it to a very large value.
-
-# To revert this change later, you can either:
-
-#     Remove the timeout parameter from the runAll function and its calls.
-#     Or set the timeout to a very large value (e.g., timeout=3600 for 1 hour) to effectively disable it.
-
-# This approach allows you to quickly test your script without the long computation times, while making it easy to return to the full computation when needed.
