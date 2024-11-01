@@ -23,19 +23,24 @@ def process_csv_file(file_path):
     # Convert output_number to an integer and start from 1
     output_number = int(output_number) + 1  # Start from 1 instead of 0
 
+    # Extract model number from file path
+    model_number = int(re.search(r'answer_\d+_(\d+)', file_path).group(1))
+
     # Iterate through each attempt line
     for attempt_number, line in enumerate(lines[1:], start=1):
         if line.strip():  # Ensure the line is not empty
             grid, score = parse_grid(line)  # Parse grid and score
             
             # Create the label
-            model_number = re.search(r'answer_\d+_(\d+)', file_path).group(1)
             label = f"Output {output_number} Model {model_number} Attempt {attempt_number}"
             
             # Append to task info
             task_info.append({
-                "grid": grid,
+                "array": grid,
                 "score": score,
+                "output_number": output_number,
+                "model_number": model_number,
+                "attempt_number": attempt_number,
                 "label": label
             })
     

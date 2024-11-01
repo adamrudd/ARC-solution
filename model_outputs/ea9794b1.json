@@ -1,0 +1,134 @@
+[
+    {
+        "array": [
+            [
+                3,
+                0,
+                3,
+                3,
+                9
+            ],
+            [
+                3,
+                3,
+                0,
+                9,
+                3
+            ],
+            [
+                0,
+                0,
+                8,
+                3,
+                9
+            ],
+            [
+                3,
+                3,
+                3,
+                3,
+                9
+            ],
+            [
+                3,
+                4,
+                9,
+                8,
+                0
+            ]
+        ],
+        "score": 5.69996,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 1,
+        "label": "Output 1 Model 3 Attempt 1"
+    },
+    {
+        "array": [
+            [
+                3,
+                0,
+                3,
+                3,
+                9
+            ],
+            [
+                3,
+                3,
+                0,
+                9,
+                3
+            ],
+            [
+                0,
+                0,
+                4,
+                3,
+                9
+            ],
+            [
+                3,
+                3,
+                3,
+                3,
+                9
+            ],
+            [
+                3,
+                0,
+                9,
+                8,
+                0
+            ]
+        ],
+        "score": 2.59996,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 2,
+        "label": "Output 1 Model 3 Attempt 2"
+    },
+    {
+        "array": [
+            [
+                3,
+                4,
+                3,
+                3,
+                9
+            ],
+            [
+                3,
+                3,
+                4,
+                9,
+                3
+            ],
+            [
+                0,
+                0,
+                4,
+                3,
+                9
+            ],
+            [
+                3,
+                3,
+                3,
+                3,
+                9
+            ],
+            [
+                3,
+                8,
+                9,
+                8,
+                4
+            ]
+        ],
+        "score": 1.79995,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 3,
+        "label": "Output 1 Model 3 Attempt 3"
+    }
+]

@@ -1,0 +1,119 @@
+[
+    {
+        "array": [
+            [
+                2,
+                2,
+                0,
+                0
+            ],
+            [
+                2,
+                0,
+                0,
+                0
+            ],
+            [
+                2,
+                2,
+                2,
+                0
+            ],
+            [
+                0,
+                2,
+                0,
+                0
+            ],
+            [
+                2,
+                0,
+                0,
+                2
+            ]
+        ],
+        "score": 3.69997,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 1,
+        "label": "Output 1 Model 3 Attempt 1"
+    },
+    {
+        "array": [
+            [
+                2,
+                2,
+                0,
+                2
+            ],
+            [
+                2,
+                0,
+                0,
+                2
+            ],
+            [
+                2,
+                2,
+                2,
+                2
+            ],
+            [
+                0,
+                2,
+                2,
+                2
+            ],
+            [
+                2,
+                0,
+                0,
+                2
+            ]
+        ],
+        "score": 3.3999699999999997,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 2,
+        "label": "Output 1 Model 3 Attempt 2"
+    },
+    {
+        "array": [
+            [
+                2,
+                2,
+                0,
+                0
+            ],
+            [
+                2,
+                0,
+                0,
+                0
+            ],
+            [
+                2,
+                2,
+                2,
+                2
+            ],
+            [
+                0,
+                2,
+                0,
+                2
+            ],
+            [
+                2,
+                0,
+                2,
+                2
+            ]
+        ],
+        "score": 2.69996,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 3,
+        "label": "Output 1 Model 3 Attempt 3"
+    }
+]

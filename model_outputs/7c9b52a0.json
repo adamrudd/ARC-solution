@@ -1,0 +1,36 @@
+[
+    {
+        "array": [
+            [
+                0,
+                2,
+                3
+            ],
+            [
+                2,
+                2,
+                3
+            ],
+            [
+                4,
+                4,
+                4
+            ],
+            [
+                6,
+                4,
+                0
+            ],
+            [
+                6,
+                6,
+                0
+            ]
+        ],
+        "score": 2.69999,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 1,
+        "label": "Output 1 Model 3 Attempt 1"
+    }
+]

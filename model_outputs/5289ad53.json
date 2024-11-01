@@ -1,0 +1,59 @@
+[
+    {
+        "array": [
+            [
+                2,
+                2,
+                2
+            ],
+            [
+                0,
+                0,
+                0
+            ]
+        ],
+        "score": 2.69998,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 1,
+        "label": "Output 1 Model 3 Attempt 1"
+    },
+    {
+        "array": [
+            [
+                2,
+                2,
+                0
+            ],
+            [
+                1,
+                1,
+                1
+            ]
+        ],
+        "score": 1.69998,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 2,
+        "label": "Output 1 Model 3 Attempt 2"
+    },
+    {
+        "array": [
+            [
+                2,
+                2,
+                2
+            ],
+            [
+                1,
+                1,
+                0
+            ]
+        ],
+        "score": 1.69997,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 3,
+        "label": "Output 1 Model 3 Attempt 3"
+    }
+]

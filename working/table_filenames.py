@@ -2,7 +2,7 @@ import os
 import csv
 
 # Define the paths
-training_path = "../dataset/training"
+training_path = "../dataset/evaluation"
 model_outputs_path = "../model_outputs"
 
 # Get the filenames from both directories

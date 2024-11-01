@@ -1,0 +1,92 @@
+[
+    {
+        "array": [
+            [
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            [
+                0,
+                4,
+                4,
+                4,
+                4
+            ],
+            [
+                0,
+                0,
+                4,
+                1,
+                1
+            ]
+        ],
+        "score": 0.79996,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 1,
+        "label": "Output 1 Model 3 Attempt 1"
+    },
+    {
+        "array": [
+            [
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            [
+                0,
+                4,
+                0,
+                4,
+                4
+            ],
+            [
+                0,
+                0,
+                0,
+                4,
+                8
+            ]
+        ],
+        "score": 0.69998,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 2,
+        "label": "Output 1 Model 3 Attempt 2"
+    },
+    {
+        "array": [
+            [
+                3,
+                3,
+                3,
+                3,
+                3
+            ],
+            [
+                0,
+                0,
+                1,
+                1,
+                1
+            ],
+            [
+                0,
+                0,
+                0,
+                0,
+                8
+            ]
+        ],
+        "score": 0.69997,
+        "output_number": 1,
+        "model_number": 3,
+        "attempt_number": 3,
+        "label": "Output 1 Model 3 Attempt 3"
+    }
+]
